@@ -65,5 +65,5 @@ WHERE ranking <= 3;
 
 ## 📂 Repository Structure
 ```text
-├── pizza_sales_analysis.sql   # Complete SQL script containing all analysis queries
+├── pizza.sql                  # Complete SQL script containing all analysis queries
 └── README.md                  # Project documentation and summary

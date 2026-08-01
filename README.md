@@ -67,3 +67,30 @@ ranked_pizza AS (
 SELECT * FROM ranked_pizza 
 WHERE ranking <= 3;
 ```
+## 📈 Part 2: Interactive Dashboard
+The aggregated datasets from the SQL queries above were visualized into an interactive business dashboard using Streamlit.
+(Note for viewer: The dashboard allows filtering and deeper dive into the specific metrics mentioned above.)
+
+### 📂 Repository Structure
+```
+├── sql_queries/
+│   └── pizza_analysis.sql           # Complete SQL script containing all analysis queries
+├── data/
+│   ├── kpi_business_overview.csv
+│   ├── hourly_pizza_trends.csv
+│   ├── pizza_size_preferences.csv
+│   └── top_3_pizzas_by_category.csv
+├── app.py                           # Python script for the Streamlit Dashboard
+├── requirements.txt                 # Python dependencies
+└── README.md                        # Project documentation
+```
+## How to Run the Dashboard Locally
+### 1. Clone this repository:
+#### Bash
+```html
+git clone [https://github.com/yusriLukman/pizza-sales-analysis]
+```
+### 2. Install the required dependencies:
+#### Bash
+```python
+pip install -r requirements.txt

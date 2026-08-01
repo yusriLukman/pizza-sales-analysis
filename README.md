@@ -1,17 +1,25 @@
-# 🍕 Pizza Sales SQL Data Analysis
+# 🍕 Pizza Sales: End-to-End Data Analysis & Dashboard
 
 ## 📌 Project Overview
-This project focuses on analyzing pizza sales data using SQL to uncover key business performance metrics, customer behavior patterns, and product popularity. The queries aim to answer critical business questions that can help optimize sales and operational efficiency.
+This project focuses on an end-to-end data analysis of a fictional pizza restaurant's sales. The primary goal is to extract raw relational data using **SQL**, uncover key business performance metrics, and translate those findings into an interactive business dashboard using **Python (Streamlit)**.
 
----
+## 💡 Key Insights & Business Recommendations
+1. **Peak Operating Hours:** Order volumes show a bimodal distribution with distinct peaks during lunch (12:00 PM - 1:00 PM) and dinner (5:00 PM - 7:00 PM). 
+   * *Action:* Optimize staff allocation and kitchen prep-times during these specific windows to improve service speed and avoid bottlenecks.
+2. **Size Preferences:** Customers overwhelmingly prefer Large and Medium pizzas, while XL and XXL sizes show minimal movement.
+   * *Action:* Consider phasing out XXL sizes or focusing promotional efforts (like bundle deals) on the highly popular Large size.
+3. **Product Performance:** *The Thai Chicken Pizza* and *The Barbecue Chicken Pizza* are the top revenue generators across all categories.
+   * *Action:* Ensure consistent inventory for Chicken and Classic category ingredients to prevent stockouts of best-sellers.
 
 ## 🛠️ Tech Stack & Tools
-* **Database Management System:** MySQL / DBeaver
-* **Language:** SQL
+* **Data Extraction & Aggregation:** MySQL / DBeaver (SQL)
+* **Data Visualization & Deployment:** Python (Streamlit, Pandas, Plotly Express)
 
 ---
 
-## 🔍 Key Insights & Business Questions Answered
+## 🔍 Part 1: SQL Data Extraction
+
+The analysis begins by extracting and aggregating raw data to answer core business questions.
 
 ### 1. Business Performance Overview (KPIs)
 Calculates core metrics including total revenue, total pizzas sold, total unique orders, and Average Order Value (AOV).
@@ -27,7 +35,7 @@ JOIN pizzas p ON od.pizza_id = p.pizza_id;
 
 ### 2. Peak Hours Analysis
 Identifies high-traffic hours based on order volume to help optimize store staffing and kitchen preparation.
-```sql
+```SQL
 SELECT 
     HOUR(order_time) AS order_hour,
     COUNT(order_id) AS total_orders
@@ -35,10 +43,9 @@ FROM orders
 GROUP BY HOUR(order_time)
 ORDER BY total_orders DESC;
 ```
-
 ### 3. Top 3 Pizzas per Category
-Uses Common Table Expressions (CTEs) and `DENSE_RANK()` window functions to rank top-performing pizzas by revenue within each category.
-```sql
+Uses Common Table Expressions (CTEs) and DENSE_RANK() window functions to rank top-performing pizzas by revenue within each category.
+```SQL
 WITH revenue_per_pizza AS (
     SELECT 
         pt.category,
@@ -60,10 +67,3 @@ ranked_pizza AS (
 SELECT * FROM ranked_pizza 
 WHERE ranking <= 3;
 ```
-
----
-
-## 📂 Repository Structure
-```text
-├── pizza.sql                  # Complete SQL script containing all analysis queries
-└── README.md                  # Project documentation and summary

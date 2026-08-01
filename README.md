@@ -87,7 +87,7 @@ The aggregated datasets from the SQL queries above were visualized into an inter
 ## How to Run the Dashboard Locally
 ### 1. Clone this repository:
 #### Bash
-```html
+```bash
 git clone [https://github.com/yusriLukman/pizza-sales-analysis]
 ```
 ### 2. Install the required dependencies:

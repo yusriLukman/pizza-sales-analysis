@@ -85,12 +85,20 @@ The aggregated datasets from the SQL queries above were visualized into an inter
 └── README.md                        # Project documentation
 ```
 ## How to Run the Dashboard Locally
+
 ### 1. Clone this repository:
 #### Bash
 ```bash
-git clone [https://github.com/yusriLukman/pizza-sales-analysis]
+git clone https://github.com/yusriLukman/pizza-sales-analysis.git
 ```
+
 ### 2. Install the required dependencies:
 #### Bash
 ```python
 pip install -r requirements.txt
+```
+### 3. Run the application:
+#### Bash
+```python
+streamlit run app.py
+```

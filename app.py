@@ -11,10 +11,15 @@ st.set_page_config(
 
 st.markdown("""
     <style>
+    [data-testid="stMetricValue"] {
+        color: #ff4b4b !important;
+    }
+    [data-testid="stMetricLabel"] {
+        color: inherit !important;
+    }
     .stMetric {
-        background-color: #f8f9fa;
-        padding: 15px;
         border-radius: 10px;
+        padding: 15px;
         border-left: 5px solid #ff4b4b;
     }
     </style>
@@ -95,6 +100,9 @@ try:
             color_discrete_sequence=["#FF4B4B"]
         )
         fig_hourly.update_layout(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             xaxis=dict(dtick=1),
             hovermode="x unified",
             margin=dict(l=20, r=20, t=30, b=20)
@@ -113,7 +121,12 @@ try:
             color_discrete_sequence=px.colors.sequential.RdBu
         )
         fig_size.update_traces(textposition='inside', textinfo='percent+label')
-        fig_size.update_layout(margin=dict(l=20, r=20, t=30, b=20))
+        fig_size.update_layout(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            margin=dict(l=20, r=20, t=30, b=20)
+        )
         st.plotly_chart(fig_size, use_container_width=True)
 
     st.markdown("---")
@@ -133,6 +146,9 @@ try:
             color_discrete_sequence=px.colors.qualitative.Set2
         )
         fig_top3.update_layout(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             yaxis={'categoryorder': 'total ascending'},
             margin=dict(l=20, r=20, t=30, b=20)
         )

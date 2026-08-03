@@ -1,9 +1,9 @@
-# 🍕 Pizza Sales: End-to-End Data Analysis & Dashboard
+# Pizza Sales: End-to-End Data Analysis & Dashboard
 
-## 📌 Project Overview
+## Project Overview
 This project focuses on an end-to-end data analysis of a fictional pizza restaurant's sales. The primary goal is to extract raw relational data using **SQL**, uncover key business performance metrics, and translate those findings into an interactive business dashboard using **Python (Streamlit)**.
 
-## 💡 Key Insights & Business Recommendations
+## Key Insights & Business Recommendations
 1. **Peak Operating Hours:** Order volumes show a bimodal distribution with distinct peaks during lunch (12:00 PM - 1:00 PM) and dinner (5:00 PM - 7:00 PM). 
    * *Action:* Optimize staff allocation and kitchen prep-times during these specific windows to improve service speed and avoid bottlenecks.
 2. **Size Preferences:** Customers overwhelmingly prefer Large and Medium pizzas, while XL and XXL sizes show minimal movement.
@@ -17,7 +17,7 @@ This project focuses on an end-to-end data analysis of a fictional pizza restaur
 
 ---
 
-## 🔍 Part 1: SQL Data Extraction
+## Part 1: SQL Data Extraction
 
 The analysis begins by extracting and aggregating raw data to answer core business questions.
 
@@ -67,29 +67,29 @@ ranked_pizza AS (
 SELECT * FROM ranked_pizza 
 WHERE ranking <= 3;
 ```
-## 📈 Part 2: Interactive Dashboard
+## Part 2: Interactive Dashboard
 The aggregated datasets from the SQL queries above were visualized into an interactive business dashboard using Streamlit.
 (Note for viewer: The dashboard allows filtering and deeper dive into the specific metrics mentioned above.)
 
-### 📂 Repository Structure
+### Repository Structure
 ```
 ├── sql_queries/
-│   └── pizza_analysis.sql           # Complete SQL script containing all analysis queries
+│   └── pizza_analysis.sql          
 ├── data/
 │   ├── kpi_business_overview.csv
 │   ├── hourly_pizza_trends.csv
 │   ├── pizza_size_preferences.csv
 │   └── top_3_pizzas_by_category.csv
-├── app.py                           # Python script for the Streamlit Dashboard
-├── requirements.txt                 # Python dependencies
-└── README.md                        # Project documentation
+├── app.py                           
+├── requirements.txt                 
+└── README.md                        
 ```
 ## How to Run the Dashboard Locally
 
 ### 1. Clone this repository:
 #### Bash
 ```bash
-git clone https://github.com/yusriLukman/pizza-sales-analysis.git
+git clone [https://github.com/yusriLukman/pizza-sales-analysis.git](https://github.com/yusriLukman/pizza-sales-analysis.git)
 ```
 
 ### 2. Install the required dependencies:
@@ -97,6 +97,7 @@ git clone https://github.com/yusriLukman/pizza-sales-analysis.git
 ```python
 pip install -r requirements.txt
 ```
+
 ### 3. Run the application:
 #### Bash
 ```python

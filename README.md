@@ -11,7 +11,7 @@ This project focuses on an end-to-end data analysis of a fictional pizza restaur
 3. **Product Performance:** *The Thai Chicken Pizza* and *The Barbecue Chicken Pizza* are the top revenue generators across all categories.
    * *Action:* Ensure consistent inventory for Chicken and Classic category ingredients to prevent stockouts of best-sellers.
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 * **Data Extraction & Aggregation:** MySQL / DBeaver (SQL)
 * **Data Visualization & Deployment:** Python (Streamlit, Pandas, Plotly Express)
 

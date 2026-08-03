@@ -3,6 +3,9 @@
 ## Project Overview
 This project focuses on an end-to-end data analysis of a fictional pizza restaurant's sales. The primary goal is to extract raw relational data using **SQL**, uncover key business performance metrics, and translate those findings into an interactive business dashboard using **Python (Streamlit)**.
 
+## Data Source
+The dataset used in this project is the widely recognized **"Pizza Place Sales"** dataset, originally created by **Maven Analytics** and accessed via Kaggle. It contains a year's worth of sales data, including order details, dates, times, and pizza variants.
+
 ## Key Insights & Business Recommendations
 1. **Peak Operating Hours:** Order volumes show a bimodal distribution with distinct peaks during lunch (12:00 PM - 1:00 PM) and dinner (5:00 PM - 7:00 PM). 
    * *Action:* Optimize staff allocation and kitchen prep-times during these specific windows to improve service speed and avoid bottlenecks.
@@ -32,7 +35,6 @@ SELECT
 FROM order_details od
 JOIN pizzas p ON od.pizza_id = p.pizza_id;
 ```
-
 ### 2. Peak Hours Analysis
 Identifies high-traffic hours based on order volume to help optimize store staffing and kitchen preparation.
 ```SQL

@@ -75,16 +75,17 @@ The aggregated datasets from the SQL queries above were visualized into an inter
 
 ### Repository Structure
 ```
+pizza-sales-analysis/
 ├── sql_queries/
-│   └── pizza_analysis.sql          
+│   └── pizza_analysis.sql
 ├── data/
 │   ├── kpi_business_overview.csv
 │   ├── hourly_pizza_trends.csv
 │   ├── pizza_size_preferences.csv
 │   └── top_3_pizzas_by_category.csv
-├── app.py                           
-├── requirements.txt                 
-└── README.md                        
+├── app.py
+├── requirements.txt
+└── README.md                       
 ```
 ## How to Run the Dashboard Locally
 

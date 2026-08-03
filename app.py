@@ -13,6 +13,7 @@ st.title("Pizza Place Sales Performance Dashboard")
 st.markdown("Interactive business dashboard analyzing sales performance, operational trends, and product preferences.")
 st.markdown("---")
 
+# 1. Load Datasets dari folder 'data/'
 @st.cache_data
 def load_data():
     kpi_df = pd.read_csv("data/kpi_business_overview.csv")
@@ -24,6 +25,7 @@ def load_data():
 try:
     kpi, hourly, size, top3 = load_data()
 
+    # 2. Key Performance Indicators (KPI Scorecard)
     st.subheader("Business Overview (KPIs)")
     col1, col2, col3, col4 = st.columns(4)
 
@@ -34,7 +36,7 @@ try:
 
     st.markdown("---")
 
-    
+    # 3. Baris Visualisasi 1: Peak Operating Hours & Size Preferences
     col_left, col_right = st.columns(2)
 
     with col_left:
@@ -64,9 +66,11 @@ try:
 
     st.markdown("---")
 
-       st.subheader("Top 3 Pizzas by Revenue (per Category)")
+    # 4. Baris Visualisasi 2: Top 3 Pizzas per Category
+    st.subheader("Top 3 Pizzas by Revenue (per Category)")
     
-      categories = list(top3['category'].unique())
+    # Filter Interaktif per Kategori
+    categories = list(top3['category'].unique())
     selected_category = st.multiselect("Filter Kategori:", categories, default=categories)
     filtered_top3 = top3[top3['category'].isin(selected_category)]
 

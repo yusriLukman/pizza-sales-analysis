@@ -5,6 +5,7 @@ import plotly.express as px
 # Konfigurasi Halaman Streamlit
 st.set_page_config(
     page_title="Pizza Sales Performance Dashboard",
+    page_icon="🍕",
     layout="wide"
 )
 

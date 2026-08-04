@@ -14,7 +14,7 @@ st.markdown("""
     <style>
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
-        font-size: 32px !important; 
+        font-size: 36px !important; 
     }
     
     [data-testid="stMetricLabel"] {
@@ -102,6 +102,7 @@ try:
     with col_left:
         st.subheader("Peak Operating Hours")
         st.caption("Distribution of orders throughout the operational hours of the day.")
+        st.markdown("<p style='font-size: 20px;"Distribution of orders throughout the operational hours of the day.</p>", unsafe_allow_html=True)
         
         hourly_sorted = hourly.sort_values('order_hour')
         fig_hourly = px.line(

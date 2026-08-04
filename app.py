@@ -40,6 +40,7 @@ st.markdown("""
 
 st.title("Pizza Place Sales Performance Dashboard")
 st.markdown("Interactive business analytics dashboard showcasing operational efficiency, customer preferences, and revenue metrics.")
+st.markdown("<p style='font-size: 16px;'>Interactive business analytics dashboard showcasing operational efficiency, customer preferences, and revenue metrics.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 def get_file_path(filename_options):

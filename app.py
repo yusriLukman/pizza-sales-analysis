@@ -13,7 +13,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     h1 {
-        font-size: 36px !important;
+        font-size: 40px !important;
     }
 
     h3 {
@@ -21,7 +21,7 @@ st.markdown("""
     }
 
     p {
-        font-size: 16px !important;
+        font-size: 20px !important;
     }
 
     [data-testid="stMetricValue"] {
@@ -31,7 +31,7 @@ st.markdown("""
     
     [data-testid="stMetricLabel"] {
         color: inherit !important;
-        font-size: 18px !important; 
+        font-size: 20px !important; 
     }
     
     .stMetric {

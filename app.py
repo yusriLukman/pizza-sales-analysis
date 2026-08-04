@@ -26,7 +26,7 @@ st.markdown("""
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
         font-size: 48px !important; 
-        font-weight: 700 !important;
+        font-weight: 800 !important;
     }
     [data-testid="stMetricLabel"] {
         color: inherit !important;

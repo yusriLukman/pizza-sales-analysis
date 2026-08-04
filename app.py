@@ -13,30 +13,30 @@ st.set_page_config(
 st.markdown("""
     <style>
     h1 {
-        font-size: 32px !important;
+        font-size: 42px !important;
         font-weight: 700 !important;
     }
     h3 {
-        font-size: 20px !important;
+        font-size: 28px !important;
         font-weight: 600 !important;
     }
     p {
-        font-size: 15px !important;
+        font-size: 20px !important;
     }
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
-        font-size: 28px !important; 
+        font-size: 42px !important; 
         font-weight: 700 !important;
     }
     [data-testid="stMetricLabel"] {
         color: inherit !important;
-        font-size: 14px !important; 
+        font-size: 20px !important; 
         font-weight: 600 !important;
     }
     .stMetric {
         border-radius: 10px;
-        padding: 15px;
-        border-left: 5px solid #ff4b4b;
+        padding: 20px;
+        border-left: 6px solid #ff4b4b;
     }
     </style>
 """, unsafe_allow_html=True)

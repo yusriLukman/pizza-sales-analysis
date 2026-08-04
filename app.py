@@ -6,6 +6,7 @@ import os
 st.set_page_config(
     page_title="Pizza Sales Performance Dashboard",
     layout="wide",
+    page_icon="🍕",
     initial_sidebar_state="expanded"
 )
 
@@ -13,14 +14,26 @@ st.markdown("""
     <style>
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
+        font-size: 32px !important; 
     }
+    
     [data-testid="stMetricLabel"] {
         color: inherit !important;
+        font-size: 16px !important; /
     }
+    
     .stMetric {
         border-radius: 10px;
         padding: 15px;
         border-left: 5px solid #ff4b4b;
+    }
+
+       h1 {
+        font-size: 36px !important;
+    }
+   
+    h3 {
+        font-size: 22px !important;
     }
     </style>
 """, unsafe_allow_html=True)

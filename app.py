@@ -13,27 +13,26 @@ st.set_page_config(
 st.markdown("""
     <style>
     h1 {
-        font-size: 40px !important;
+        font-size: 32px !important;
+        font-weight: 700 !important;
     }
-
     h3 {
-        font-size: 24px !important;
-    }
-
-    p {
         font-size: 20px !important;
+        font-weight: 600 !important;
     }
-
+    p {
+        font-size: 15px !important;
+    }
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
-        font-size: 36px !important; 
+        font-size: 28px !important; 
+        font-weight: 700 !important;
     }
-    
     [data-testid="stMetricLabel"] {
         color: inherit !important;
-        font-size: 20px !important; 
+        font-size: 14px !important; 
+        font-weight: 600 !important;
     }
-    
     .stMetric {
         border-radius: 10px;
         padding: 15px;
@@ -69,7 +68,7 @@ try:
     kpi, hourly, size, top3 = load_data()
 
     st.sidebar.header("Dashboard Filters")
-    st.sidebar.markdown("Filter data to dynamically analyze store performance.")
+    st.sidebar.markdown("<p>Filter data to dynamically analyze store performance.</p>", unsafe_allow_html=True)
 
     all_categories = list(top3['category'].unique())
     selected_categories = st.sidebar.multiselect(
@@ -113,7 +112,7 @@ try:
             x="order_hour", 
             y="total_orders", 
             markers=True,
-            labels={"order_hour": "Hour of Day (24-Hour Clock)", "total_orders": "Total Orders"},
+            labels={"order_hour": "Hour of Day", "total_orders": "Total Orders"},
             color_discrete_sequence=["#FF4B4B"]
         )
         fig_hourly.update_layout(

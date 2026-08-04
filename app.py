@@ -182,3 +182,11 @@ try:
 
 except Exception as e:
     st.error(f"Can't Load Data. Detail Error: {e}")
+    
+st.markdown("---")
+st.markdown(
+    "<p style='text-align: center; font-size: 14px; opacity: 0.7;'>"
+    "Pizza Sales Performance Dashboard • Developed by <b>Nama Anda</b> • Powered by Streamlit & Plotly"
+    "</p>", 
+    unsafe_allow_html=True
+)

@@ -122,7 +122,7 @@ try:
             xaxis=dict(dtick=1),
             hovermode="x unified",
             margin=dict(l=20, r=20, t=30, b=20),
-            font=dict(size=16)
+            font=dict(size=20)
         )
         st.plotly_chart(fig_hourly, use_container_width=True)
 
@@ -140,14 +140,14 @@ try:
         fig_size.update_traces(
             textposition='inside', 
             textinfo='percent+label',
-            textfont_size=18 
+            textfont_size=20 
         )
         fig_size.update_layout(
             template="plotly_dark",
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=30, b=20),
-            font=dict(size=16)
+            font=dict(size=20)
         )
         st.plotly_chart(fig_size, use_container_width=True)
 
@@ -167,14 +167,14 @@ try:
             text_auto='.2s',
             color_discrete_sequence=px.colors.qualitative.Set2
         )
-        fig_top3.update_traces(textfont_size=16)
+        fig_top3.update_traces(textfont_size=20)
         fig_top3.update_layout(
             template="plotly_dark",
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
             yaxis={'categoryorder': 'total ascending'},
             margin=dict(l=20, r=20, t=30, b=20),
-            font=dict(size=16)
+            font=dict(size=20)
         )
         st.plotly_chart(fig_top3, use_container_width=True)
     else:

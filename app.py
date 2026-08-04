@@ -25,7 +25,7 @@ st.markdown("""
     }
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
-        font-size: 42px !important; 
+        font-size: 48px !important; 
         font-weight: 700 !important;
     }
     [data-testid="stMetricLabel"] {
@@ -36,7 +36,7 @@ st.markdown("""
     .stMetric {
         border-radius: 10px;
         padding: 20px;
-        border-left: 6px solid #ff4b4b;
+        border-left: 10px solid #ff4b4b;
     }
     </style>
 """, unsafe_allow_html=True)

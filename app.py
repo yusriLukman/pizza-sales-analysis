@@ -19,7 +19,7 @@ st.markdown("""
     
     [data-testid="stMetricLabel"] {
         color: inherit !important;
-        font-size: 16px !important; /
+        font-size: 24px !important; /
     }
     
     .stMetric {
@@ -33,7 +33,7 @@ st.markdown("""
     }
    
     h3 {
-        font-size: 22px !important;
+        font-size: 24px !important;
     }
     </style>
 """, unsafe_allow_html=True)

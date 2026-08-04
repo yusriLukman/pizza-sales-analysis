@@ -12,6 +12,18 @@ st.set_page_config(
 
 st.markdown("""
     <style>
+    h1 {
+        font-size: 36px !important;
+    }
+
+    h3 {
+        font-size: 24px !important;
+    }
+
+    p {
+        font-size: 16px !important;
+    }
+
     [data-testid="stMetricValue"] {
         color: #ff4b4b !important;
         font-size: 36px !important; 
@@ -19,7 +31,7 @@ st.markdown("""
     
     [data-testid="stMetricLabel"] {
         color: inherit !important;
-        font-size: 24px !important; /
+        font-size: 18px !important; 
     }
     
     .stMetric {
@@ -27,19 +39,11 @@ st.markdown("""
         padding: 15px;
         border-left: 5px solid #ff4b4b;
     }
-
-       h1 {
-        font-size: 36px !important;
-    }
-   
-    h3 {
-        font-size: 24px !important;
-    }
     </style>
 """, unsafe_allow_html=True)
 
 st.title("Pizza Place Sales Performance Dashboard")
-st.markdown("<p style='font-size: 20px;'>Interactive business analytics dashboard showcasing operational efficiency, customer preferences, and revenue metrics.</p>", unsafe_allow_html=True)
+st.markdown("<p>Interactive business analytics dashboard showcasing operational efficiency, customer preferences, and revenue metrics.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 def get_file_path(filename_options):
@@ -101,8 +105,7 @@ try:
 
     with col_left:
         st.subheader("Peak Operating Hours")
-        st.caption("Distribution of orders throughout the operational hours of the day.")
-        st.markdown("<p style='font-size: 20px;"Distribution of orders throughout the operational hours of the day.</p>", unsafe_allow_html=True)
+        st.markdown("<p>Distribution of orders throughout the operational hours of the day.</p>", unsafe_allow_html=True)
         
         hourly_sorted = hourly.sort_values('order_hour')
         fig_hourly = px.line(
@@ -125,7 +128,7 @@ try:
 
     with col_right:
         st.subheader("Customer Size Preferences")
-        st.caption("Proportion of sales volume based on pizza size variant.")
+        st.markdown("<p>Proportion of sales volume based on pizza size variant.</p>", unsafe_allow_html=True)
         
         fig_size = px.pie(
             filtered_size, 
@@ -146,7 +149,7 @@ try:
     st.markdown("---")
 
     st.subheader("Revenue Performance by Category & Variant")
-    st.caption("Top 3 highest-revenue generating pizzas broken down by category.")
+    st.markdown("<p>Top 3 highest-revenue generating pizzas broken down by category.</p>", unsafe_allow_html=True)
 
     if not filtered_top3.empty:
         fig_top3 = px.bar(

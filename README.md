@@ -1,7 +1,24 @@
 # Pizza Sales: End-to-End Data Analysis & Dashboard
+---
 
 ## Project Overview
 This project focuses on an end-to-end data analysis of a fictional pizza restaurant's sales. The primary goal is to extract raw relational data using **SQL**, uncover key business performance metrics, and translate those findings into an interactive business dashboard using **Python (Streamlit)**.
+
+**Live Demo:** [Pizza Sales Performance Dashboard](https://pizza-sales-analysis-ms2myqet6hcdcheogm2gad.streamlit.app/)
+
+
+## Dashboard Preview
+
+### 1. Business Overview & Interactive Filters
+![KPI Overview](./assets/Dashboard_Preview_4.png)
+
+### 2. Operational Trends & Customer Preferences
+![Peak Operating Hours and Preferences](./assets/Dashboard_Preview_2.png)
+
+### 3. Revenue Performance by Category & Variant
+![Revenue Breakdown](./assets/Dashboard_Preview_3.png)
+
+---
 
 ## Data Source
 The dataset used in this project is the widely recognized **"Pizza Place Sales"** dataset, originally created by **Maven Analytics** and accessed via Kaggle. It contains a year's worth of sales data, including order details, dates, times, and pizza variants.
@@ -76,16 +93,19 @@ The aggregated datasets from the SQL queries above were visualized into an inter
 ### Repository Structure
 ```
 pizza-sales-analysis/
-├── sql_queries/
-│   └── pizza_analysis.sql
+├── assets/                          
+│   ├── Dashboard_Preview_4.png
+│   ├── Dashboard_Preview_2.png
+│   └── Dashboard_Preview_3.png
 ├── data/
-│   ├── kpi_business_overview.csv
 │   ├── hourly_pizza_trends.csv
+│   ├── kpi_business_overview.csv
 │   ├── pizza_size_preferences.csv
 │   └── top_3_pizzas_by_category.csv
 ├── app.py
+├── pizza.sql                      
 ├── requirements.txt
-└── README.md                       
+└── README.md                    
 ```
 ## How to Run the Dashboard Locally
 
@@ -106,3 +126,8 @@ pip install -r requirements.txt
 ```python
 streamlit run app.py
 ```
+
+---
+<p align="center">
+  Pizza Sales Performance Dashboard • Developed by <b>Moh. Yusril Lukman Hakim</b> (@yusrilLukman)
+</p>

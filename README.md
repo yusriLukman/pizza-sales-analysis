@@ -4,7 +4,7 @@
 ## Project Overview
 This project focuses on an end-to-end data analysis of a fictional pizza restaurant's sales. The primary goal is to extract raw relational data using **SQL**, uncover key business performance metrics, and translate those findings into an interactive business dashboard using **Python (Streamlit)**.
 
-**Live Demo:** [Pizza Sales Performance Dashboard](https://pizza-sales-analysis-ms2myqet6hcdcheogm2gad.streamlit.app/)
+**Live Demo:** [Pizza Sales Performance Dashboard](https://pizza-sales-analysis-yusril.streamlit.app/)
 
 
 ## Dashboard Preview
